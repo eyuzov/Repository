@@ -140,8 +140,8 @@ class Buy {
     $itemContainer.append($itemDel);
 
     $(container).prepend($itemContainer);
-
   }
 
 
 }
+
