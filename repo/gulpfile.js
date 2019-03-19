@@ -122,5 +122,5 @@ gulp.task('copyJson', () => {
 
 
 gulp.task('default', gulp.series('clean', 'minImgs', 'less', gulp.parallel('html', 'js:es6', 'js:babel', 'pug',
-  'less:watch', 'html:watch', 'js:watch', 'pug:watch','json:watch', 'copyJson', 'server')));
+  'less:watch', 'html:watch', 'js:watch', 'pug:watch','json:watch', 'copyJson')));
 
