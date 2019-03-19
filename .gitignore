@@ -1,4 +1,5 @@
 
+repo/.idea/*
 repo/dist/*
 repo/node_modules/*
-repo/.idea/*
+
