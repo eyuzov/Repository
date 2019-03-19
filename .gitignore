@@ -1,2 +1,4 @@
 
 frontend_HTML_CSS/.idea/*
+frontend_HTML_CSS/dist/*
+frontend_HTML_CSS/node_modules/*
