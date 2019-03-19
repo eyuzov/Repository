@@ -34,7 +34,6 @@ body {
 }
 
 .before_main h3 {
-  font-family: Lato;
   color: #f16d7f;
   font-size: 24px;
   font-weight: 900;
@@ -59,7 +58,6 @@ body {
 }
 
 .up_page {
-  font-family: Lato;
   color: #636363;
   font-size: 14px;
   font-weight: 300;
@@ -68,8 +66,6 @@ body {
 }
 
 .curr_page {
-
-  font-family: Lato;
   color: #f16d7f;
   font-size: 14px;
   font-weight: 700;
@@ -188,22 +184,19 @@ details[open] > summary {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 70px;
-}
-
-.catalog_top_flex {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  margin-left: 25px;
-}
-
-.catalog_bottom_flex {
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-left: 25px;
+  & .catalog-filter {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 25px;
+  }
+  & .catalog-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 25px;
+  }
 }
 
 .catalog_top {
@@ -319,9 +312,7 @@ details[open] > summary {
 .sort_by {
   padding-left: 10px;
   margin-left: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ebebeb;
+  border: 1px solid #ebebeb;
   box-sizing: border-box;
   background-color: #ffffff;
   width: 130px;
@@ -344,7 +335,6 @@ details[open] > summary {
 }
 
 .catalog_item h3 {
-  font-family: Lato;
   color: #222222;
   font-size: 13px;
   font-weight: 400;
@@ -355,7 +345,6 @@ details[open] > summary {
 }
 
 .catalog_item h4 {
-  font-family: Lato;
   color: #f16d7f;
   font-size: 16px;
   font-weight: 700;
@@ -394,7 +383,7 @@ details[open] > summary {
 }
 
 .hover:hover {
-  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .hover:hover img {
@@ -406,9 +395,7 @@ details[open] > summary {
   align-items: center;
   justify-content: space-between;
   border-radius: 3px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ebebeb;
+  border: 1px solid #ebebeb;
   box-sizing: border-box;
   background-color: #ffffff;
   width: 261px;
@@ -441,9 +428,7 @@ details[open] > summary {
 .all button {
 
   border-radius: 3px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ef5b70;
+  border: 1px solid #ef5b70;
   box-sizing: border-box;
   background-color: #ffffff;
   width: 150px;
@@ -457,7 +442,7 @@ details[open] > summary {
 }
 
 .all button:hover {
-  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
   color: #ffffff;
   background-color: #ef5b70;
 }

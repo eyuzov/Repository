@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Catalog</title>
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style_cart.css">
@@ -53,7 +53,7 @@
         </div>
         <div class="header-right">
             <div class="cart-hover">
-                <a href="shopping_cart.html"><img src="images/cart.svg" alt="cart" ></a>
+                <a href="shopping_cart.html"><img src="images/cart.svg" alt="cart"></a>
 
                 <!--******************DROP DOWN CART START******************************-->
 
@@ -62,7 +62,7 @@
                     <div class="cart-flex">
                         <div class="cart-total">
                             <h4>TOTAL</h4>
-                            <h4>$500.00</h4>
+                            <h4>$0.00</h4>
                         </div>
                         <button type="submit" class="checkout">Checkout</button>
                         <button type="submit" class="to-cart">Go to cart</button>
@@ -87,8 +87,8 @@
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="catalog.html">Man</a>
-                <div class="mega flex">
-                    <div class="triangle"></div>
+                <div class="mega">
+                    <div class="triangle3"></div>
                     <div class="mega_flex">
                         <h3>Women</h3>
                         <ul class="mega_list">
@@ -131,8 +131,8 @@
                 </div>
             </li>
             <li><a href="catalog.html">Women</a>
-                <div class="mega flex1">
-                    <div class="triangle"></div>
+                <div class="mega">
+                    <div class="triangle4"></div>
                     <div class="mega_flex">
                         <h3>Women</h3>
                         <ul class="mega_list">
@@ -175,8 +175,8 @@
                 </div>
             </li>
             <li><a href="catalog.html">Accoseriese</a>
-                <div class="mega flex2">
-                    <div class="triangle"></div>
+                <div class="mega">
+                    <div class="triangle5"></div>
                     <div class="mega_flex">
                         <h3>Women</h3>
                         <ul class="mega_list">
@@ -219,8 +219,8 @@
                 </div>
             </li>
             <li><a href="catalog.html">Featured</a>
-                <div class="mega flex3">
-                    <div class="triangle"></div>
+                <div class="mega">
+                    <div class="triangle6"></div>
                     <div class="mega_flex">
                         <h3>Women</h3>
                         <ul class="mega_list">
@@ -263,8 +263,8 @@
                 </div>
             </li>
             <li><a href="catalog.html">Hot Deals</a>
-                <div class="mega flex4">
-                    <div class="triangle"></div>
+                <div class="mega">
+                    <div class="triangle7"></div>
                     <div class="mega_flex">
                         <h3>Women</h3>
                         <ul class="mega_list">
@@ -317,12 +317,10 @@
 <nav>
     <div class="before_main">
         <div class="container before_main_content">
-            <h3>New Arrivals</h3>
-
+            <h3>shopping cart</h3>
             <ul class="breadcrumbs">
                 <li><a href="index.html" class="up_page">Home</a></li>
-                <li><a href="catalog.html" class="up_page">Men</a></li>
-                <li class="curr_page">New Arrivals</li>
+                <li class="curr_page">shopping cart</li>
             </ul>
         </div>
     </div>
@@ -330,9 +328,8 @@
 <!--********************SECTION END*********************************-->
 
 
-<!--********************TABLE SECTION START*********************************-->
-
 <div class="container">
+    <!--********************TABLE SECTION START*********************************-->
     <table class="table">
         <thead>
         <tr class="head">
@@ -352,7 +349,8 @@
                         <div class="prod-desc">
                             <h3>Mango People T-shirt</h3>
                             <p>Color: <span>Red</span><br>
-                                Size: <span>Xll</span></p>
+                                Size: <span>XXl</span></p>
+
                         </div>
                     </a>
                 </div>
@@ -406,8 +404,8 @@
     <!--*********************MAIN SECTION AFTER TABLE START*********************************-->
 
     <div class="buttons">
-        <button class="btn">cLEAR SHOPPING CART</button>
-        <button class="btn">cONTINUE sHOPPING</button>
+        <button class="btn" id="clear">cLEAR SHOPPING CART</button>
+        <button class="btn" id="continue">cONTINUE sHOPPING</button>
     </div>
 
 
@@ -433,9 +431,9 @@
                 <button class="coupon">Apply coupon</button>
             </form>
         </div>
-        <div class="order">
-            <h6>Sub total $900</h6>
-            <h2>GRAND TOTAL <span> $900</span></h2>
+        <div class="order gray">
+            <h6>Sub total <span class="all-total">$ 0</span></h6>
+            <h2>GRAND TOTAL <span class="all-total"> $ 0</span></h2>
             <div class="center">
                 <hr class="line">
                 <button class="proceed">proceed to checkout</button>
@@ -511,7 +509,7 @@
                         </li>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Shop</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="feedback.html">About</a></li>
                         <li><a href="#">How It Works</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -575,14 +573,17 @@
         src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
+
+<script src="js/copy.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/buy.js"></script>
+<script src="js/feedback.js"></script>
 <script src="js/main.js"></script>
 <script>
-    window.onload = () => {
-        let copy = new Copyright();
-        $('.proceed').on('click', () => {
-            location.href = 'checkout.html';
-        });
-    }
+  window.onload = () => {
+    let init = new Init();
+  }
 </script>
 </body>
 

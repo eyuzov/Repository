@@ -13,6 +13,8 @@ let gulp = require('gulp'),
   imagemin = require('gulp-imagemin');
 
 const paths = {
+  dev: 'site',
+  devJson: 'site/**/*.json',
   devHtml: 'site/**/*.html',
   devLess: 'site/style/**/*.less',
   devJs: 'site/js/**/*.js',
@@ -100,11 +102,25 @@ gulp.task('pug:watch', () => {
   }));
 });
 
+gulp.task('json:watch', () => {
+  return gulp.watch(paths.devJson, gulp.series('copyJson', (done) => {
+    bs.reload();
+    done();
+  }));
+});
+
 gulp.task('minImgs', () => {
   return gulp.src(paths.devImgs)
     .pipe(imagemin())
     .pipe(gulp.dest(paths.projectImgs))
 });
 
+gulp.task('copyJson', () => {
+  return gulp.src(paths.devJson)
+    .pipe(gulp.dest(paths.project))
+});
 
-gulp.task('default', gulp.series('clean', 'minImgs', gulp.parallel('html', 'less', 'js:es6', 'js:babel', 'pug', 'less:watch', 'html:watch', 'js:watch', 'pug:watch', 'server')));
+
+gulp.task('default', gulp.series('clean', 'minImgs', 'less', gulp.parallel('html', 'js:es6', 'js:babel', 'pug',
+  'less:watch', 'html:watch', 'js:watch', 'pug:watch','json:watch', 'copyJson', 'server')));
+

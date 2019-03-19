@@ -52,7 +52,7 @@
             </form>
         </div>
         <div class="header-right">
-            <div class="cart-hover">
+            <div class="cart-hover" id="cart-hover">
                 <a href="shopping_cart.html"><img src="images/cart.svg" alt="cart"></a>
 
                 <!--******************DROP DOWN CART START******************************-->
@@ -62,7 +62,7 @@
                     <div class="cart-flex">
                         <div class="cart-total">
                             <h4>TOTAL</h4>
-                            <h4 id="cart-sum">0</h4>
+                            <h4 id="cart-sum">$0.00</h4>
                         </div>
                         <button type="submit" class="checkout">Checkout</button>
                         <button type="submit" class="to-cart">Go to cart</button>
@@ -402,8 +402,8 @@
                 <h4>pRICE</h4>
                 <div id="slider-range"></div>
                 <div class="summ">
-                    <input type="text" id="amount-start" readonly>
-                    <input type="text" id="amount-end" readonly>
+                    <input type="text" id="amount-start" readonly title="amount-start">
+                    <input type="text" id="amount-end" readonly title="amount-end">
                 </div>
             </div>
 
@@ -411,14 +411,14 @@
             <div class="sorting">
                 <div class="sorting_text">
                     Sort By
-                    <select name="sort_by" class="sort_by">
+                    <select name="sort_by" class="sort_by" title="sort_by">
                         <option>Name</option>
                         <option>Name</option>
                     </select>
                 </div>
                 <div class="sorting_text">
                     Show
-                    <select name="sort_by" class="sort_by">
+                    <select name="sort_by" class="sort_by" title="show quantity">
                         <option>1</option>
                         <option>3</option>
                         <option>4</option>
@@ -430,11 +430,15 @@
                     </select>
                 </div>
             </div>
-            <div class="hover" data-id="1" data-name="Mango People T-shirt" data-img="images/9.png" data-price="52.00">
+        </div>
+        <!--*******************SORTING END*******************************-->
+        <!--*******************CATALOG START*******************************-->
+        <div class="catalog-items">
+            <div class="hover" data-id="1" data-name="Mango People T-shirt" data-img="images/9.png" data-price="52.14">
                 <a href="product.html">
                     <div class="catalog_item"><img src="images/9.png" alt="product image">
                         <h3>Mango People T-shirt</h3>
-                        <h4>$52.00</h4>
+                        <h4>$52.14</h4>
                     </div>
                 </a>
                 <div class="add_flex">
@@ -452,7 +456,7 @@
                     <a href="#" class="add" data-id="2">Add to Cart</a>
                 </div>
             </div>
-            <div class="hover">
+            <div class="hover" data-id="3" data-name="Mango People T-shirt" data-img="images/3.png" data-price="52.00">
                 <a href="product.html">
                     <div class="catalog_item"><img src="images/3.png" alt="product image">
                         <h3>Mango People T-shirt</h3>
@@ -460,10 +464,10 @@
                     </div>
                 </a>
                 <div class="add_flex">
-                    <a href="#" class="add">Add to Cart</a>
+                    <a href="#" class="add" data-id="3">Add to Cart</a>
                 </div>
             </div>
-            <div class="hover">
+            <div class="hover" data-id="4" data-name="Mango People T-shirt" data-img="images/11.png" data-price="52.00">
                 <a href="product.html">
                     <div class="catalog_item"><img src="images/11.png" alt="product image">
                         <h3>Mango People T-shirt</h3>
@@ -471,10 +475,10 @@
                     </div>
                 </a>
                 <div class="add_flex">
-                    <a href="#" class="add">Add to Cart</a>
+                    <a href="#" class="add" data-id="4">Add to Cart</a>
                 </div>
             </div>
-            <div class="hover">
+            <div class="hover" data-id="5" data-name="Mango People T-shirt" data-img="images/8.png" data-price="52.00">
                 <a href="product.html">
                     <div class="catalog_item"><img src="images/8.png" alt="product image">
                         <h3>Mango People T-shirt</h3>
@@ -482,10 +486,10 @@
                     </div>
                 </a>
                 <div class="add_flex">
-                    <a href="#" class="add">Add to Cart</a>
+                    <a href="#" class="add" data-id="5">Add to Cart</a>
                 </div>
             </div>
-            <div class="hover">
+            <div class="hover" data-id="6" data-name="Mango People T-shirt" data-img="images/12.png" data-price="52.00">
                 <a href="product.html">
 
                     <div class="catalog_item"><img src="images/12.png" alt="product image">
@@ -494,7 +498,7 @@
                     </div>
                 </a>
                 <div class="add_flex">
-                    <a href="#" class="add">Add to Cart</a>
+                    <a href="#" class="add" data-id="6">Add to Cart</a>
                 </div>
             </div>
             <div class="hover">
@@ -530,8 +534,19 @@
                     <a href="#" class="add">Add to Cart</a>
                 </div>
             </div>
+            <div class="hover">
+                <a href="product.html">
+                    <div class="catalog_item"><img src="images/14.png" alt="product image">
+                        <h3>Mango People T-shirt</h3>
+                        <h4>$52.00</h4>
+                    </div>
+                </a>
+                <div class="add_flex">
+                    <a href="#" class="add">Add to Cart</a>
+                </div>
+            </div>
         </div>
-
+        <!--*******************CATALOG END*******************************-->
         <div class="pages">
 
             <a href="#">&lt; </a>
@@ -543,13 +558,11 @@
             <a href="#">6.....20 </a>
             <a href="#">&gt;</a>
         </div>
-
         <div class="all">
             <form action="#">
                 <button type="submit">View All</button>
             </form>
         </div>
-
     </div>
 
 
@@ -649,7 +662,7 @@
                         </li>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Shop</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="feedback.html">About</a></li>
                         <li><a href="#">How It Works</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -713,32 +726,15 @@
         src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
+<script src="js/copy.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/slider.js"></script>
 <script src="js/buy.js"></script>
+<script src="js/feedback.js"></script>
+<script src="js/main.js"></script>
 <script>
-  $("#slider-range").slider({
-    range: true,
-    min: 0,
-    max: 500,
-    values: [52, 400],
-    slide: function (event, ui) {
-      $("#amount-start").val(`$ ${0 + ui.values[0]}`);
-      $("#amount-end").val(`$ ${0 + ui.values[1]}`);
-    }
-  });
-  $("#amount-start").val("$ " + $("#slider-range").slider("values", 0));
-  $("#amount-end").val("$ " + $("#slider-range").slider("values", 1));
-
   window.onload = () => {
-    let copy = new Copyright();
-    $('.add_flex').on('click', 'a', (e) => {
-
-      let $product = $(`.hover[data-id=${e.target.dataset.id}]`);
-
-      let buy = new Buy($product);
-    });
-
-
+    let init = new Init();
   }
 </script>
 </body>

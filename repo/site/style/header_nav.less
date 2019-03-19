@@ -47,9 +47,7 @@
 .browse {
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
   box-sizing: border-box;
   background: -webkit-linear-gradient(-90deg, #f9f9f9 0%, #f5f5f5 100%);
   background: -moz-linear-gradient(-90deg, #f9f9f9 0%, #f5f5f5 100%);
@@ -145,9 +143,7 @@
 .header-left input {
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
   box-sizing: border-box;
   background-color: #ffffff;
   width: 317px;
@@ -192,7 +188,7 @@
 
 .cart-dropdown {
   border: 1px solid #e8e8e8;
-  display: flex;
+  display: none;
   width: 262px;
   position: absolute;
   top: 46px;
@@ -255,38 +251,41 @@
     }
   }
 }
+
+
 /**************************************STYLES FOR JS CODE START***************************************************/
-.item-parent{
+.item-parent {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(237,237,237,0.74);
-  & img{
+
+  border-bottom: 1px solid rgba(237, 237, 237, 0.74);
+  & img {
     width: 72px;
     height: 85px
   }
-  & .item-desc{
+  & .item-desc {
     display: flex;
     flex-direction: column;
     text-align: left;
     justify-content: space-evenly;
     margin-left: 15px;
-    & p{
+    & p {
       font-size: 12px;
       line-height: 1.2;
       font-weight: 700;
       text-transform: uppercase;
       color: #222222;
     }
-    & span{
+    & span {
       font-size: 10px;
       font-weight: 400;
       text-transform: uppercase;
       color: #f16d7f;
     }
   }
-  & .item-del{
+  & .item-del {
     display: flex;
     align-items: center;
     font-size: 16px;
@@ -294,9 +293,13 @@
     text-transform: uppercase;
     color: #c0c0c0;
     margin-left: 10px;
+    & :hover {
+      color: red;
+      cursor: pointer;
+    }
   }
-
 }
+
 /**************************************STYLES FOR JS CODE END***************************************************/
 /*******************DROP DOWN CART END*******************************/
 
@@ -304,7 +307,7 @@
   background-color: #f16d7f;
   width: 130px;
   height: 38px;
-
+  border: 1px solid #f16d7f;
   color: #ffffff;
   font-size: 15px;
   font-weight: 400;
@@ -327,9 +330,9 @@
   justify-content: center;
 }
 
-.menu > li {
-  position: relative;
-}
+//.menu > li {
+//  position: relative;
+//}
 
 .menu > li > a {
   font-family: 'Lato', sans-serif;
@@ -356,8 +359,8 @@
   border: 1px solid #e8e8e8;
   display: none;
   position: absolute;
-  top: 58px;
-  left: -10px;
+  top: 160px;
+  left: 540px;
 }
 
 .menu > li:hover .mega {
@@ -404,60 +407,32 @@
   margin-bottom: 20px;
 }
 
-.triangle {
+.triangle3, .triangle4, .triangle5, .triangle6, .triangle7 {
   height: 16px;
   width: 16px;
   border: 1px solid #e8e8e8;
   position: absolute;
   top: -10px;
-  left: 39px;
   transform: rotate(45deg);
   border-bottom: none;
   border-right: none;
   background-color: #fff;
+  left: 215px;
 }
 
-.flex {
-  top: 58px;
-  left: -100px;
+.triangle4 {
+  left: 305px;
 }
 
-.flex .triangle {
-  left: 125px;
+.triangle5 {
+  left: 420px;
 }
 
-.flex1 {
-  top: 58px;
-  left: -174px;
+.triangle6 {
+  left: 540px;
 }
 
-.flex1 .triangle {
-  left: 200px;
+.triangle7 {
+  left: 650px;
 }
 
-.flex2 {
-  top: 58px;
-  left: -272px;
-}
-
-.flex2 .triangle {
-  left: 320px;
-}
-
-.flex3 {
-  top: 58px;
-  left: -403px;
-}
-
-.flex3 .triangle {
-  left: 450px;
-}
-
-.flex4 {
-  top: 58px;
-  left: -515px;
-}
-
-.flex4 .triangle {
-  left: 560px;
-}

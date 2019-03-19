@@ -1,13 +1,22 @@
-"use strict";
+class Init {
+  constructor() {
+    this._init();
+  }
 
-class Copyright {
-    constructor() {
-        this._render();
-    }
+  _init() {
 
-    _render() {
-        let $year = new Date().getFullYear();
-        let $a = $(`<h6>&copy; ${$year} Brand All Rights Reserved.</h6>`);
-        $('.copy').append($a);
-    }
+    let $copy = new Copyright();
+    let $slider = new Slider();
+    let $cart = new Cart();
+    let $buy = new Buy();
+    let $feed = new Feedback('feedback.json');
+
+    $('.proceed,.checkout').on('click', () => {
+      location.href = 'checkout.html';
+    });
+    $('.to-cart').on('click', () => {
+      location.href = 'shopping_cart.html';
+    });
+
+  }
 }
