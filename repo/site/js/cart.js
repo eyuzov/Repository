@@ -1,5 +1,5 @@
 class Cart {
-  constructor(source = '../products.json', container = '.table') {
+  constructor(source = 'products.json', container = '.table') {
     this.source = source;
     this.container = container;
     this.amount = 0;

@@ -22,6 +22,7 @@ const paths = {
   devPug: 'site/pug/**/*.pug',
 
   project: 'dist',
+  projectJson: 'dist/',
   projectCss: 'dist/style',
   projectJs: 'dist/js',
   projectImgs: 'dist/images/',
@@ -117,10 +118,10 @@ gulp.task('minImgs', () => {
 
 gulp.task('copyJson', () => {
   return gulp.src(paths.devJson)
-    .pipe(gulp.dest(paths.project))
+    .pipe(gulp.dest(paths.projectJson))
 });
 
 
 gulp.task('default', gulp.series('clean', 'minImgs', 'less', gulp.parallel('html', 'js:es6', 'js:babel', 'pug',
-  'less:watch', 'html:watch', 'js:watch', 'pug:watch','json:watch', 'copyJson')));
+  'less:watch', 'html:watch', 'js:watch', 'pug:watch','json:watch', 'copyJson', 'server')));
 
