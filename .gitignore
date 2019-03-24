@@ -1,5 +1,3 @@
 
-repo/.idea/*
-repo/dist/*
-repo/node_modules/*
+*Coursera/**/.idea/*
 
