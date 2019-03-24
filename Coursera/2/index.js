@@ -1,4 +1,5 @@
 /**
+ * В этом задании необходимо проверить, что числа составляют корректное время.
  * @param {Number} hours
  * @param {Number} minutes
  * @returns {Boolean}
