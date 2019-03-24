@@ -1,4 +1,5 @@
 /**
+ * В этом задании необходимо реализовать функцию, которая увеличивает время на заданное количество минут.
  * @param {Number} hours
  * @param {Number} minutes
  * @param {Number} interval
