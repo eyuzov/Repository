@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^4.29.6"
+    "browserify": "^16.2.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   }
 }

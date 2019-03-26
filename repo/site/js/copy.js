@@ -9,3 +9,4 @@ class Copyright {
     $('.copy').append($a);
   }
 }
+
