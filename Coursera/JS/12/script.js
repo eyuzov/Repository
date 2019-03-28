@@ -16,6 +16,7 @@ function validateForm(obj) {
       }
     }
     if (onOffInvalidClassForm > 0) {
+      form.classList.remove(obj.formValidClass);
       form.classList.add(obj.formInvalidClass);
     } else {
       form.classList.remove(obj.formInvalidClass);
