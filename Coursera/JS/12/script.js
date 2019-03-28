@@ -21,6 +21,7 @@
 
 */
 
+
 // Код валидации формы
 function validateForm(obj) {
   var count = 0;
