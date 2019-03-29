@@ -1,4 +1,4 @@
-class Copyright {
+export default class Copyright {
   constructor() {
     this._render();
   }
@@ -9,4 +9,3 @@ class Copyright {
     $('.copy').append($a);
   }
 }
-

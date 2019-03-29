@@ -11,8 +11,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browserify": "^16.2.3",
+    "css-loader": "^2.1.1",
+    "less-loader": "^4.1.0",
+    "node-less": "^1.0.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
+  },
+  "dependencies": {
+    "html-loader": "^0.5.5"
   }
 }
