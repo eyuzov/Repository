@@ -2,4 +2,7 @@
 repo/dist/*
 repo/node_modules/*
 repo/.idea/*
-Shop/.idea/workspace.xml
+Shop/.idea/*
+Shop/.idea/misc.xml
+Shop/dist/*
+Shop/node_mod*/*
