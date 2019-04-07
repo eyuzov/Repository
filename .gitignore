@@ -1,4 +1,7 @@
-
 Coursera/**/.idea/*
 Shop/.idea/*
 */.idea/*
+Coursera/**/.idea/*
+Shop/dist/*
+Shop/node_mod*/*
+
