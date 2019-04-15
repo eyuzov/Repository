@@ -3,26 +3,36 @@ $pathToSmall = "img/small/";
 $pathToBig = "img/big/";
 
 
-
 if (isset($_POST["load"])) {
     if ($_FILES["myfile"]["size"] >= (1024 * 1024)) {
         echo("Файл не должен быть больше 1 Мб");
+    } elseif ($_FILES["myfile"]["type"] != "image/jpeg" && $_FILES["myfile"]["type"] != "image/png") {
+        echo("Файл должен быть в формате JPEG\PNG");
     } else {
-        $fileName = $_FILES["myfile"]["name"];
-        $path = $pathToBig . $fileName;
+        $name = $_FILES["myfile"]["name"];
+        $path = $pathToBig . $name;
         if (move_uploaded_file($_FILES["myfile"]["tmp_name"], $path)) {
-           echo "Файл успешно загружен";
-            resize($path,$pathToSmall, $fileName);
+            echo "Файл успешно загружен";
+            resize($name, $pathToSmall, $pathToBig);
         } else {
             die("Error load file!");
         }
     }
 }
 
-function resize($path,$pathToSmall,$fileName ) {
-    $size = GetImageSize($path);
+function resize($name, $pathToSmall, $pathToBig)
+{
+    $type = mime_content_type($pathToBig . $name);
+    $size = GetImageSize($pathToBig . $name);
 //Создаём новое изображение из «старого»
-    $src = ImageCreateFromJPEG($path);
+    switch ($type) {
+        case "image/jpeg":
+            $src = ImageCreateFromJPEG($pathToBig . $name);
+            break;
+        case "image/png":
+            $src = imagecreatefrompng($pathToBig . $name);
+            break;
+    }
 //Берём числовое значение ширины фотографии, которое мы получили в первой строке и записываем это число в переменную
     $iw = $size[0];
 //Проделываем ту же операцию, что и в предыдущей строке, но только уже с высотой.
@@ -36,16 +46,15 @@ function resize($path,$pathToSmall,$fileName ) {
 //Данная функция копирует прямоугольную часть изображения в другое изображение, плавно интерполируя пикселные значения таким образом, что, в частности, уменьшение размера изображения сохранит его чёткость и яркость.
     ImageCopyResampled($dst, $src, 0, 0, 0, 0, 150, $new_h, $iw, $ih);
 //Сохраняем полученное изображение в формате JPG
-    ImageJPEG($dst, $pathToSmall.$fileName, 100);
+    ImageJPEG($dst, $pathToSmall . $name, 100);
+
     imagedestroy($src);
 }
 
 
 $imgs = scandir($pathToSmall);
 $imgs = array_slice($imgs, 2);
-var_dump($imgs);
-var_dump($pathToSmall);
-$block = "<div style='display: flex; flex-wrap: wrap'>";
+$block = "<div>";
 foreach ($imgs as $item) {
     $block .= "<a href='$pathToBig$item' target='_blank'><img src='$pathToSmall$item' style= 'margin: 10px; height: 150px' ></a>";
 }
@@ -56,6 +65,6 @@ echo $block;
 
 
 <form method="post" enctype="multipart/form-data">
-    <input type="file" name="myfile" accept="image/jpeg, image/png, image/gif">
+    <input type="file" name="myfile" accept="image/jpeg, image/png">
     <input type="submit" name="load">
 </form>
