@@ -177,6 +177,7 @@
   align-items: flex-end;
   justify-content: space-between;
   position: relative;
+
   & a:hover .cart-dropdown {
     cursor: pointer;
     display: flex;
@@ -214,6 +215,7 @@
     border-right: none;
     background-color: #fff;
   }
+
   & .cart-flex {
     padding: 0 19px 20px;
 
@@ -227,6 +229,7 @@
       padding-top: 19px;
       padding-bottom: 32px;
     }
+
     & .checkout {
       width: 225px;
       height: 50px;
@@ -237,11 +240,13 @@
       color: #f16d7f;
       background-color: #ffffff;
       margin-bottom: 10px;
+
       &:hover {
         color: #ffffff;
         background-color: #f16d7f;
       }
     }
+
     & .to-cart {
       width: 225px;
       height: 50px;
@@ -255,38 +260,44 @@
     }
   }
 }
+
 /**************************************STYLES FOR JS CODE START***************************************************/
-.item-parent{
+.item-parent {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(237,237,237,0.74);
-  & img{
+  border-bottom: 1px solid rgba(237, 237, 237, 0.74);
+
+  & img {
     width: 72px;
     height: 85px
   }
-  & .item-desc{
+
+  & .item-desc {
     display: flex;
     flex-direction: column;
     text-align: left;
     justify-content: space-evenly;
     margin-left: 15px;
-    & p{
+
+    & p {
       font-size: 12px;
       line-height: 1.2;
       font-weight: 700;
       text-transform: uppercase;
       color: #222222;
     }
-    & span{
+
+    & span {
       font-size: 10px;
       font-weight: 400;
       text-transform: uppercase;
       color: #f16d7f;
     }
   }
-  & .item-del{
+
+  & .item-del {
     display: flex;
     align-items: center;
     font-size: 16px;
@@ -297,6 +308,7 @@
   }
 
 }
+
 /**************************************STYLES FOR JS CODE END***************************************************/
 /*******************DROP DOWN CART END*******************************/
 
@@ -304,7 +316,7 @@
   background-color: #f16d7f;
   width: 130px;
   height: 38px;
-
+  border: 1px solid #f16d7f;
   color: #ffffff;
   font-size: 15px;
   font-weight: 400;
