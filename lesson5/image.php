@@ -1,4 +1,4 @@
-<?php
+ <?php
 include "main.php";
 $sql = "SELECT * FROM `images` WHERE `id` = $_GET[id]";
 $sql = mysqli_real_escape_string(getDb(), $sql);
